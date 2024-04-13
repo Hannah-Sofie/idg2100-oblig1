@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet" />
+    <title>Oblig 1 | Web components | IDG2100</title>
+    <link rel="stylesheet" href="./assets/core.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>the SUPER Assessor - Idea generator</h1>
+      <p>
+        SUPER Assessor, a game designed for educators, is the result of a
+        research project undertaken by the Department of Design in Trondheim.
+        Its primary objective is to aid educators in the development of unique
+        assessment methods. These methods are intended to create innovative ways
+        to evaluate and grade students.
+      </p>
+    </header>
+    <main>
+      <h2>Mission cards (x3)</h2>
+      <div class="card-container mission-cards">
+        <super-mission-card
+          card-id="87"
+          card-type="Mission"
+          card-name="Innovation"
+          card-description="Your mission is to find and support new and innovative ways of assessing students."
+        ></super-mission-card>
+        <super-mission-card
+          card-id="88"
+          card-type="Mission"
+          card-name="Time management"
+          card-description="Your mission is to reduce time used on assessment (not nescessarily thinking about costs)."
+        ></super-mission-card>
+        <super-mission-card
+          card-id="89"
+          card-type="Mission"
+          card-name="Learning"
+          card-description="Your mission is to focus on the students learning outcomes."
+        ></super-mission-card>
+      </div>
+
+      <h2>Assessment cards (x6)</h2>
+      <div class="card-container assessment-cards">
+        <super-assessment-card
+          card-id="1"
+          card-type="assessment"
+          card-category="Who is assessed"
+          card-name="Student"
+          card-description="A student is assessed individually"
+          card-details="The student will be assess either on an independent work or on their contribution in a group assignment. "
+        ></super-assessment-card>
+        <super-assessment-card
+          card-id="5"
+          card-type="assessment"
+          card-category="The assessor"
+          card-name="Teacher"
+          card-description="Assess the work of a student or student group"
+          card-details="Has good knowledge about the course curriculum and learning outcomes."
+        ></super-assessment-card>
+        <super-assessment-card
+          card-id="18"
+          card-type="assessment"
+          card-category="Assessment artefact"
+          card-name="Report"
+          card-description="Written account of something that the student has observed, heard, done, or investigated."
+          card-details="Make assessment criteria about content and quality rather than word count."
+        ></super-assessment-card>
+        <super-assessment-card
+          card-id="49"
+          card-type="assessment"
+          card-category="Assessment format"
+          card-name="Spontaneous oral feedback"
+          card-description="Immediate feedback and reactions from the assessor."
+          card-details="Can be about prototype, presentation or performance."
+        ></super-assessment-card>
+        <super-assessment-card
+          card-id="63"
+          card-type="assessment"
+          card-category="Context"
+          card-name="Plenary"
+          card-description="Assessment is done in plenary with an audience"
+          card-details="Often used when the artefact is something that can be presented to a bigger audience, like a presentation, prototype, model or poster."
+        ></super-assessment-card>
+        <super-assessment-card
+          card-id="77"
+          card-type="assessment"
+          card-category="Assessment timing"
+          card-name="At course start"
+          card-description="Assessment is conducted before teaching starts."
+          card-details="Assessment is conducted before teaching starts."
+        ></super-assessment-card>
+      </div>
+    </main>
+
+    <aside>
+      <h2>Favourite cards</h2>
+      <favourite-card-list></favourite-card-list>
+
+      <h2>Control panel</h2>
+      <p>
+        Click the following button to extract random cards and display them in
+        the main area.
+      </p>
+      <button type="button" id="randomiseButton">Randomise</button>
+    </aside>
+
+    <footer></footer>
+
+    <script type="module">
+      import { FavouriteCardList } from "./components/FavouriteCardList.js";
+      import { SuperAssessmentCard } from "./components/SuperAssessmentCard.js";
+      import { SuperMissionCard } from "./components/SuperMissionCard.js";
+    </script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/properties.js"></script>
+    <script src="/scripts/randomCards.js"></script>
+  </body>
+</html>

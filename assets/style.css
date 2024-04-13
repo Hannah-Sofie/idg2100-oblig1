@@ -1,0 +1,46 @@
+/* Your styles go here */
+:root {
+  --card-width: 200px;
+  --card-height: 300px;
+
+  --white: #fff;
+  --black: #000;
+  --gray: #6c757d;
+  --light-blue: #74a7de;
+
+  --color-who-is-assessed: #586d8f; /* Blue */
+  --color-the-assessor: #7a5ead; /* Purple */
+  --color-artefact: #b34f59; /* Red */
+  --color-format: #7dc28d; /* Green */
+  --color-context: #c37a9c; /* Pink */
+  --color-timing: #cf8f5b; /* Orange */
+  --color-mission: #e2c364; /* Yellow */
+
+  --color-border-who-is-assessed: #3f5b88; /* Dark blue */
+  --color-border-the-assessor: #693eb8; /* Dark purple */
+  --color-border-artefact: #b4323f; /* Dark red */
+  --color-border-format: #5ca86e; /* Dark green */
+  --color-border-context: #b25982; /* Dark pink */
+  --color-border-timing: #cb7127; /* Dark orange */
+  --color-border-mission: #ffecb1; /* Dark yellow */
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+super-assessment-card,
+super-mission-card {
+  display: block;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+super-assessment-card {
+  background-color: var(--color-border-assessment, #000);
+}
+
+super-mission-card {
+  background-color: var(--color-border-mission, #ffecb1);
+}
